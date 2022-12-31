@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/699ad8e2389240649f1b7dc46f86162a/artifacts
+end_time: 1672518499235
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 699ad8e2389240649f1b7dc46f86162a
+run_name: My model experiment 1
+run_uuid: 699ad8e2389240649f1b7dc46f86162a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672518483999
+status: 4
+tags: []
+user_id: oabas
