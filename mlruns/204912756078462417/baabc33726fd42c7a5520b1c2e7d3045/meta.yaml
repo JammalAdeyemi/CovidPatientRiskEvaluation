@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/204912756078462417/baabc33726fd42c7a5520b1c2e7d3045/artifacts
+end_time: 1672521737764
+entry_point_name: ''
+experiment_id: '204912756078462417'
+lifecycle_stage: active
+run_id: baabc33726fd42c7a5520b1c2e7d3045
+run_name: silent-skink-802
+run_uuid: baabc33726fd42c7a5520b1c2e7d3045
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672521737596
+status: 3
+tags: []
+user_id: oabas

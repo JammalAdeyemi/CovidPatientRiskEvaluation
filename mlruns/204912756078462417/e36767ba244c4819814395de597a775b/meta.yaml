@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/204912756078462417/e36767ba244c4819814395de597a775b/artifacts
+deleted_time: 1672523034024
+end_time: 1672522485284
+entry_point_name: ''
+experiment_id: '204912756078462417'
+lifecycle_stage: deleted
+run_id: e36767ba244c4819814395de597a775b
+run_name: burly-wasp-447
+run_uuid: e36767ba244c4819814395de597a775b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672522485014
+status: 3
+tags: []
+user_id: oabas

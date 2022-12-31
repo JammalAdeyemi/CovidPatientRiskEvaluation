@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/204912756078462417/0451fe5575864f368881344269881d15/artifacts
+end_time: 1672521062995
+entry_point_name: ''
+experiment_id: '204912756078462417'
+lifecycle_stage: active
+run_id: 0451fe5575864f368881344269881d15
+run_name: bright-slug-541
+run_uuid: 0451fe5575864f368881344269881d15
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672521062697
+status: 3
+tags: []
+user_id: oabas
