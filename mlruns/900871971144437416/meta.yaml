@@ -1,0 +1,6 @@
+artifact_location: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/900871971144437416
+creation_time: 1672519760650
+experiment_id: '900871971144437416'
+last_update_time: 1672519760650
+lifecycle_stage: active
+name: my_classification_model_1

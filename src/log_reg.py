@@ -8,6 +8,8 @@ from imblearn.under_sampling import RandomUnderSampler
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
+mlflow.set_experiment("my_classification_model_1")
+
 df = pd.read_csv('./Data/Covid-19.csv')
 
 # Splitting the datasets and choosing 10 columns that are correlated with the DEATH Column
@@ -26,11 +28,11 @@ with mlflow.start_run(run_name='My model experiment 1') as run:
 
     lr = LogisticRegression()
     lr.fit(X_train,y_train)
-    mlflow.sklearn.log_model(lr, 'Logistic-regression-model')
+    mlflow.sklearn.log_model(lr, "Logistic-regression-model")
 
     # log model performance
     accuracy = lr.score(X_test,y_test)
-    mlflow.log_metric('accuracy', accuracy)
+    mlflow.log_metric("accuracy", accuracy)
     print(f"Logistic Regression Accuracy: {accuracy}")
 
     run_id = run.info.run_uuid
