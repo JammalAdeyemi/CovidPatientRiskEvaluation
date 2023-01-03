@@ -44,13 +44,16 @@ with mlflow.start_run(run_name="AdaBoost Classifier") as run:
     # Log model artifacts (e.g. model files)
     mlflow.sklearn.log_model(ada_boost, "model")
 
-    print("AdaBoost Accuracy: ",ada_boost.score(X_test,y_test))
-    print("AdaBoost Classifier R2 Score: ", r2_score(y_test,ada_boost.predict(X_test)))
+    accuracy = ada_boost.score(X_test,y_test)
+    r2 = r2_score(y_test,y_preds)
+
+    print(f"AdaBoost Accuracy: {accuracy}")
+    print(f"AdaBoost Classifier R2 Score: {r2}")
     print(classification_report(y_test, y_preds))
 
     # Log model metrics
-    mlflow.log_metric("accuracy", ada_boost.score(X_test,y_test))
-    mlflow.log_metric("r2_score", r2_score(y_test,ada_boost.predict(X_test)))
+    mlflow.log_metric("accuracy", accuracy)
+    mlflow.log_metric("r2_score", r2)
     # mlflow.log_metric("classification_report", classification_report(y_test, y_preds))
 
     # Log a classification report as an artifact
@@ -60,7 +63,7 @@ with mlflow.start_run(run_name="AdaBoost Classifier") as run:
 
     # Log a confusion matrix as an artifact
     plt.figure()
-    sns.heatmap(confusion_matrix(y_test, ada_boost.predict(X_test)), annot=True, fmt=".0f")
+    sns.heatmap(confusion_matrix(y_test, y_preds), annot=True, fmt=".0f")
     plt.title("AdaBoost Classifier Confusion Matrix",fontsize=18, color="b")
     plt.savefig("adaboost_conf_matrix.jpeg")
     mlflow.log_artifact("adaboost_class_conf_matrix.jpeg")
