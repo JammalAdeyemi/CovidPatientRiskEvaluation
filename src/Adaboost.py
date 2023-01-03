@@ -47,9 +47,9 @@ with mlflow.start_run(run_name="AdaBoost Classifier") as run:
     accuracy = ada_boost.score(X_test,y_test)
     r2 = r2_score(y_test,y_preds)
 
-    print(f"AdaBoost Accuracy: {accuracy}")
-    print(f"AdaBoost Classifier R2 Score: {r2}")
-    print(classification_report(y_test, y_preds))
+    # print(f"AdaBoost Accuracy: {accuracy}")
+    # print(f"AdaBoost Classifier R2 Score: {r2}")
+    # print(classification_report(y_test, y_preds))
 
     # Log model metrics
     mlflow.log_metric("accuracy", accuracy)
@@ -65,7 +65,7 @@ with mlflow.start_run(run_name="AdaBoost Classifier") as run:
     plt.figure()
     sns.heatmap(confusion_matrix(y_test, y_preds), annot=True, fmt=".0f")
     plt.title("AdaBoost Classifier Confusion Matrix",fontsize=18, color="b")
-    plt.savefig("adaboost_conf_matrix.jpeg")
+    # plt.savefig("adaboost_conf_matrix.jpeg")
     mlflow.log_artifact("adaboost_class_conf_matrix.jpeg")
 
     run_id = run.info.run_uuid
