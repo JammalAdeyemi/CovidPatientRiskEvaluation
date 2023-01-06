@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/982264887014322048/efec5373bcb54184925f2113110231a8/artifacts
+end_time: 1672947927287
+entry_point_name: ''
+experiment_id: '982264887014322048'
+lifecycle_stage: active
+run_id: efec5373bcb54184925f2113110231a8
+run_name: dazzling-mare-199
+run_uuid: efec5373bcb54184925f2113110231a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672947927090
+status: 3
+tags: []
+user_id: oabas

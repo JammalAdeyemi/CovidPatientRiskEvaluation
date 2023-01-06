@@ -11,11 +11,11 @@ from imblearn.under_sampling import RandomUnderSampler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, r2_score, classification_report
 
-mlflow.set_experiment("Project")
+mlflow.set_experiment("school_project")
 
 df = pd.read_csv('./Data/Covid-19.csv')
 
-with mlflow.start_run(run_name='Logistic Regression(GridSearchCV)') as run:
+with mlflow.start_run(run_name='Logistic Regression') as run:
 
     # Splitting the datasets and choosing 14 columns that are correlated with the DEATH Column
     X = SelectKBest(k=14, score_func=f_classif).fit_transform(df.drop(['DEATH'],axis=1), df['DEATH'])
@@ -53,16 +53,15 @@ with mlflow.start_run(run_name='Logistic Regression(GridSearchCV)') as run:
     mlflow.log_metric("r2_score", r2)
 
     # Log a classification report as an artifact
-    with open("classification_report.txt", "w") as f:
+    with open("logistic_reg_classification_report.txt", "w") as f:
         f.write(classification_report(y_test, y_preds))
-    mlflow.log_artifact("classification_report.txt")
+    mlflow.log_artifact("logistic_reg_classification_report.txt")
 
     # Log a confusion matrix as an artifact
     plt.figure()
     sns.heatmap(confusion_matrix(y_test, y_preds), annot=True, fmt=".0f")
-    plt.title("Logistic Regression Confusion Matrix",fontsize=18, color="b")
-    # plt.savefig("Logreg_gridsearchcv_conf_matrix.jpeg")
-    mlflow.log_artifact("Logreg_gridsearchcv_conf_matrix.jpeg")
+    plt.title("Logistic Regression CV Confusion Matrix",fontsize=18, color="b")
+    mlflow.log_artifact("./images/plots/log_reg_cv_conf_matrix.jpeg")
 
     run_id = run.info.run_uuid
     experiment_id = run.info.experiment_id

@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/982264887014322048/4009c0f6eff3485ebb1a6e7cd3016605/artifacts
+deleted_time: 1672948137917
+end_time: 1672948103225
+entry_point_name: ''
+experiment_id: '982264887014322048'
+lifecycle_stage: deleted
+run_id: 4009c0f6eff3485ebb1a6e7cd3016605
+run_name: Voting Classifier
+run_uuid: 4009c0f6eff3485ebb1a6e7cd3016605
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672948100257
+status: 4
+tags: []
+user_id: oabas

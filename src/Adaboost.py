@@ -11,7 +11,7 @@ from imblearn.under_sampling import RandomUnderSampler
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.model_selection import train_test_split
 
-mlflow.set_experiment("Project")
+mlflow.set_experiment("school_project")
 
 df = pd.read_csv('./Data/Covid-19.csv')
 
@@ -57,16 +57,16 @@ with mlflow.start_run(run_name="AdaBoost Classifier") as run:
     # mlflow.log_metric("classification_report", classification_report(y_test, y_preds))
 
     # Log a classification report as an artifact
-    with open("classification_report.txt", "w") as f:
+    with open("adaboost_classification_report.txt", "w") as f:
         f.write(classification_report(y_test, y_preds))
-    mlflow.log_artifact("classification_report.txt")
+    mlflow.log_artifact("adaboost_classification_report.txt")
 
     # Log a confusion matrix as an artifact
     plt.figure()
     sns.heatmap(confusion_matrix(y_test, y_preds), annot=True, fmt=".0f")
     plt.title("AdaBoost Classifier Confusion Matrix",fontsize=18, color="b")
-    # plt.savefig("adaboost_conf_matrix.jpeg")
-    mlflow.log_artifact("adaboost_class_conf_matrix.jpeg")
+    plt.savefig("./images/plots/adaboost_conf_matrix.jpeg")
+    mlflow.log_artifact("./images/plots/adaboost_class_conf_matrix.jpeg")
 
     run_id = run.info.run_uuid
     experiment_id = run.info.experiment_id

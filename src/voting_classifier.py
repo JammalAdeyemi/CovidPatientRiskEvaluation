@@ -12,7 +12,7 @@ from sklearn.preprocessing import RobustScaler
 from imblearn.under_sampling import RandomUnderSampler
 
 
-mlflow.set_experiment("Project")
+mlflow.set_experiment("school_project")
 
 df = pd.read_csv('./Data/Covid-19.csv')
 
@@ -39,8 +39,8 @@ with mlflow.start_run(run_name='Voting Classifier') as run:
     mlflow.log_param("resampler", "RandomUnderSampler")
 
     # Load the models from the pickle files
-    model_1 = mlflow.sklearn.load_model("./models/Adaboost.pkl")
-    model_2 = mlflow.sklearn.load_model("./models/Logreg_cv.pkl")
+    model_1 = mlflow.sklearn.load_model("Adaboost.pkl")
+    model_2 = mlflow.sklearn.load_model("Logreg_cv.pkl")
 
     # Create the voting classifier using the two models
     voting_clf = VotingClassifier(estimators=[('Adaboost', model_1), ('Logreg_cv', model_2)],voting='hard')
@@ -58,16 +58,16 @@ with mlflow.start_run(run_name='Voting Classifier') as run:
     mlflow.log_metric("r2_score", r2)
 
     # Log a classification report as an artifact
-    with open("classification_report.txt", "w") as f:
+    with open("voting_classifier_classification_report.txt", "w") as f:
         f.write(classification_report(y_test, y_preds))
-    mlflow.log_artifact("classification_report.txt")
+    mlflow.log_artifact("voting_classifier_classification_report.txt")
 
     # Log a confusion matrix as an artifact
     plt.figure()
     sns.heatmap(confusion_matrix(y_test, y_preds), annot=True, fmt=".0f")
     plt.title("Voting Classifier Confusion Matrix",fontsize=18, color="b")
-    # plt.savefig("adaboost_conf_matrix.jpeg")
-    mlflow.log_artifact("voting_class_conf_matrix.jpeg")
+    plt.savefig("./images/plots/voting_class_conf_matrix.jpeg")
+    mlflow.log_artifact("./images/plots/voting_class_conf_matrix.jpeg")
 
     run_id = run.info.run_uuid
     experiment_id = run.info.experiment_id
