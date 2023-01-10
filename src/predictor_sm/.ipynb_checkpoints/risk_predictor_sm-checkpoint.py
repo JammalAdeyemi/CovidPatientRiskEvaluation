@@ -4,18 +4,18 @@ import logging
 import joblib
 import numpy as np
 from io import BytesIO
-from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import VotingClassifier
 
 logger = logging.getLogger(__name__)
 
-MODEL_FILE_NAME = "Adaboost.pkl"
+MODEL_FILE_NAME = "voting_classifier.pkl"
 
 
 def model_fn(model_dir):
     """Deserialize and return fitted model."""
     logger.info("Loading model...")
     file_name = os.path.join(model_dir, MODEL_FILE_NAME)
-    loaded_model: AdaBoostClassifier = joblib.load(open(file_name, "rb"))
+    loaded_model: VotingClassifier = joblib.load(open(file_name, "rb"))
     logger.info("Model loaded successfully.")
     return loaded_model
 
