@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/982264887014322048/c7aadb8c636e4b7dbd62b20f476be093/artifacts
+end_time: 1672947315827
+entry_point_name: ''
+experiment_id: '982264887014322048'
+lifecycle_stage: active
+run_id: c7aadb8c636e4b7dbd62b20f476be093
+run_name: AdaBoost Classifier
+run_uuid: c7aadb8c636e4b7dbd62b20f476be093
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672947271313
+status: 3
+tags: []
+user_id: oabas

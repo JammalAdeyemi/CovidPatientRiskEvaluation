@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/982264887014322048/65d192ebeb414c54accae54ee3f4ed55/artifacts
+deleted_time: 1672947958067
+end_time: 1672947871792
+entry_point_name: ''
+experiment_id: '982264887014322048'
+lifecycle_stage: deleted
+run_id: 65d192ebeb414c54accae54ee3f4ed55
+run_name: Logistic Regression
+run_uuid: 65d192ebeb414c54accae54ee3f4ed55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672947849820
+status: 4
+tags: []
+user_id: oabas

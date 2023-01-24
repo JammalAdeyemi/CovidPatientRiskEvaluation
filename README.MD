@@ -1,35 +1,15 @@
-# Covid Risk Predictor
+# Covid-19 Patient Risk Prediction
 
-The goal of this project is to build a machine learning model that can predict the risk level of a Covid-19 patient based on their current symptoms, status, and medical history. This model will be trained on a dataset of Covid-19 patient records and will be able to classify patients as either low risk or high risk.
+This repository contains the materials and resources for my final coursework project on building a machine learning model to predict the risk level of a Covid-19 patient based on their current symptoms, status, and medical history. The model was trained using the Adaboost and Logistic Regression algorithms and a Voting Classifier was used to boost the accuracy of the model. The model was then deployed on AWS using SageMaker.
 
-## Getting Started
+## Project Overview
 
-To set up this project on your local machine, you will need to install the following dependencies:
-- Python 3.6 or higher
-- NumPy
-- pandas
-- scikit-learn
+The goal of this project is to build a machine learning model that can predict the risk level of a Covid-19 patient based on their current symptoms, status, and medical history. The model takes into account various factors such as age, sex, medical history, and current symptoms to make a prediction. The model was trained on a dataset containing patient information and was evaluated using various metrics such as accuracy and F1 score.
 
-You can install these dependencies using pip:
-* pip install numpy pandas scikit-learn
+## Tools and Technologies
 
-## Usage
-
-To use the model, you will need to pass in the patient's current symptoms, status, and medical history as input features. The model will output a prediction of the patient's risk level as either low or high.
-
-Here is an example of how to use the model:
-* from risk_predictor import predict_risk
-
-### Define the input features for a patient
-patient_features = {
-
-"symptoms": ["cough", "fever"],
-"status": "hospitalized",
-"medical_history": ["diabetes", "heart disease"]
-
-}
-
-### Predict the patient's risk level
-risk_prediction = predict_risk(patient_features)
-
-print(risk_prediction) # Output: "high"
+The project was implemented using Python and the following libraries:
+- Scikit-learn for training and evaluating the machine learning model
+- Pandas and Numpy for data manipulation and analysis
+- Matplotlib and Seaborn for data visualization
+- AWS SageMaker for deploying the model

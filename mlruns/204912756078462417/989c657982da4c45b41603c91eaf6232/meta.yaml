@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/204912756078462417/989c657982da4c45b41603c91eaf6232/artifacts
+deleted_time: 1672523034008
+end_time: 1672522484953
+entry_point_name: ''
+experiment_id: '204912756078462417'
+lifecycle_stage: deleted
+run_id: 989c657982da4c45b41603c91eaf6232
+run_name: My model experiment 4
+run_uuid: 989c657982da4c45b41603c91eaf6232
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672522448135
+status: 3
+tags: []
+user_id: oabas

@@ -1,0 +1,19 @@
+artifact_path: Logistic-regression-gridsearchcv-model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.8
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.0
+mlflow_version: 2.1.1
+model_uuid: 6b8be62800c944aea3f7c310d80b000c
+run_id: d84d0d5e1b15422c95f6e6467a82c7f5
+utc_time_created: '2022-12-31 21:10:48.624488'

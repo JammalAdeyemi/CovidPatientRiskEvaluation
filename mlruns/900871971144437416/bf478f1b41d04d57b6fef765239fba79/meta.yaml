@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/oabas/Documents/GitHub/CovidPatientRiskEvaluation/mlruns/900871971144437416/bf478f1b41d04d57b6fef765239fba79/artifacts
+end_time: 1672520775497
+entry_point_name: ''
+experiment_id: '900871971144437416'
+lifecycle_stage: active
+run_id: bf478f1b41d04d57b6fef765239fba79
+run_name: rebellious-snail-48
+run_uuid: bf478f1b41d04d57b6fef765239fba79
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672520775329
+status: 3
+tags: []
+user_id: oabas
